@@ -72,7 +72,7 @@ const Home = () => {
 					)),
 				},
 				{
-					className: "bghome3",  
+					className: "bghome3",
 					title: "Join Us Today!",
 					content:
 						"Discover the thrill of MMA with ScrapHouse. Sign up now for exciting content, live updates, and more!",
@@ -81,10 +81,10 @@ const Home = () => {
 			].map((section, index) => (
 				<section
 					key={index}
-					className={`text-sm min-h-screen text-center flex flex-wrap justify-center gap-6 ${section.className}`}
+					className={`text-sm min-h-screen text-center flex flex-wrap justify-center gap-6 relative -z-10 ${section.className}`}
 				>
-					<div className="w-full mx-auto p-8 flex flex-col justify-center gap-16 backdrop-filter backdrop-blur-md backdrop-grayscale">
-						<div className="flex flex-col gap-8">
+					<div className="w-full mx-auto p-8 flex flex-col z-50 justify-center gap-16 backdrop-filter backdrop-blur-md backdrop-grayscale">
+						<div className="flex flex-col gap-8 ">
 							<h1 className="font-heading text-4xl">{section.title}</h1>
 							<p>{section.content}</p>
 							{section.features && (
@@ -102,6 +102,8 @@ const Home = () => {
 							{section.button && <div>{section.button}</div>}
 						</div>
 					</div>
+					<div className="absolute top-0 bg-gradient-to-b dark:from-black from-white to-transparent h-[50%] w-full z-0 "></div>
+					<div className="absolute bottom-0 bg-gradient-to-t dark:from-black from-white to-transparent h-[50%] w-full z-0 "></div>
 				</section>
 			))}
 		</>

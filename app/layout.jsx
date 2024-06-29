@@ -25,9 +25,8 @@ export default function RootLayout({ children }) {
 		<html lang="en" suppressHydrationWarning>
 			<UserProvider>
 				<body
-					className={`flex flex-col justify-between min-h-screen ${
-						["/", "/about"].includes(usePathname()) ? "h-screen" : ""
-					} ${poppins.className}
+					className={`flex flex-col justify-between min-h-screen ${["/", "/about"].includes(usePathname()) ? "h-screen" : ""
+						} ${poppins.className}
 `}
 				>
 					<Providers>
